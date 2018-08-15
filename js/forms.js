@@ -38,7 +38,7 @@ class RegisterForm {
         // let password = new PasswordValidator('password');
         // this.fields.push(password);
         // // Password Confirm
-        // let password2 = new PasswordConfirmValidator('password2');
+        // let password2 = new PasswordConfirmValidator('password', 'password2');
         // this.fields.push(password2);
         // // Agree Terms
         // let agreeTerms = new AgreeTermsValidator('agreeTerms');
