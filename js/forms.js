@@ -28,7 +28,21 @@ class RegisterForm {
         // Last Name
         let lastName = new NameValidator('lastName');
         this.fields.push(lastName);
-        // ...
+        // // Phone
+        // let phone = new PhoneValidator('phone');
+        // this.fields.push(phone);
+        // // Email
+        // let email = new EmailValidator('email');
+        // this.fields.push(email);
+        // // Password
+        // let password = new PasswordValidator('password');
+        // this.fields.push(password);
+        // // Password Confirm
+        // let password2 = new PasswordConfirmValidator('password2');
+        // this.fields.push(password2);
+        // // Agree Terms
+        // let agreeTerms = new AgreeTermsValidator('agreeTerms');
+        // this.fields.push(agreeTerms);
     }
     
     validForm() {
