@@ -4,38 +4,38 @@
  * Date Submitted: 2018-08-15
  */
 
-var NameValidator = function(fieldId) {
-    this.id = fieldId;
-    this.element = document.getElementById(fieldId);
-    console.log(this.element.parentElement);
-    this.errorElement = this.element.parentElement
-                            .getElementsByClassName('invalid-feedback')[0];
-    console.log(this.errorElement);
-    this.setup();
-}
+class NameValidator {
 
-NameValidator.prototype.setup = function() {
-    this.element.addEventListener('keyup', (event) => {
-        if (this.valid()) {
-            this.hideErrorMessage();
-        } else {
-            this.showErrorMessage();
-        }
-    }, false);
-}
+    constructor(fieldId) {
+        this.id = fieldId;
+        this.element = document.getElementById(fieldId);
+        this.errorElement = this.element.parentElement
+                                .getElementsByClassName('invalid-feedback')[0];
+        this.setup();
+    }
 
-NameValidator.prototype.valid = function() {
-    let value = this.element.value;
-    return /^\D{2,}/.test(value);
-}
+    setup() {
+        this.element.addEventListener('keyup', (event) => {
+            if (this.valid()) {
+                this.hideErrorMessage();
+            } else {
+                this.showErrorMessage();
+            }
+        }, false);
+    }
 
-NameValidator.prototype.hideErrorMessage = function() {
-    this.errorElement.style.display = 'none';
-}
+    valid() {
+        let value = this.element.value;
+        return /^\D{2,}/.test(value);
+    }
 
-NameValidator.prototype.showErrorMessage = function() {
-    this.errorElement.style.display = 'block';
-    console.log(this.errorElement); 
+    hideErrorMessage() {
+        this.errorElement.style.display = 'none';
+    }
+
+    showErrorMessage() {
+        this.errorElement.style.display = 'block';
+    }
 }
 
 export { NameValidator }

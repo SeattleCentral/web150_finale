@@ -62,3 +62,9 @@ typings/
 
 # Cloud 9
 .c9
+
+# JS build output
+dist/main.js
+
+# package lock file
+package-lock.json

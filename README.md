@@ -14,9 +14,14 @@ One of your teammates has already finished the NameValidator. Look at it for gui
 
 ## Instruction
 
-1. Clone the [web-150-finale](https://ide.c9.io/halfnibble_1/web-150-finale) Cloud9 workspace. You need at least one clone per team.
+1. Clone the [web-150-finale](https://github.com/SeattleCentral/web150_finale) git repo and change into the dir.
+
+```
+git clone https://github.com/SeattleCentral/web150_finale
+cd web150_finale/
+```
 2. Run `npm install` to make sure you have all the required dependencies.
-3. Start Gulp with `gulp`.
+3. Start the dev server with `npm run dev`.
 4. Assign a validator function constructor to each member of your team. There are 5 validators total you may assign, 1 per team member
     - PhoneValidator
     - EmailValidator
